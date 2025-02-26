@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Что побеждает камень?</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="game-content">
+            <button id="newGameButton" class="new-game-btn" onclick="playAgain()">
+                Новая игра
+            </button>
+            <div id="questionText" class="question-text">
+                что побеждает камень?
+            </div>
+            <div class="rock-container">
+                <div class="rock"></div>
+                <div class="crown">👑</div>
+            </div>
+            <div class="input-section">
+                <input type="text" id="userInput" placeholder="введите ответ">
+                <button onclick="checkAnswer()" id="submitButton">вперед!</button>
+            </div>
+            <div id="battleText" class="battle-text"></div>
+            <div id="explanation" class="explanation"></div>
+            <div id="nextButton" style="display: none;">
+                <button onclick="nextQuestion()">дальше</button>
+            </div>
+            <div id="score">счёт: 0</div>
+            <div id="loading" class="loading">
+                <div class="loading-dots">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+            </div>
+            <div id="aiResponse" class="ai-response"></div>
+            <div id="history" class="history"></div>
+            <div class="game-controls">
+                <div id="gameEndControls" style="display: none;">
+                    <button onclick="share()" class="share-btn">Поделиться ⤴</button>
+                    <div class="control-buttons">
+                        <button onclick="playAgain()">сыграть еще раз</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
